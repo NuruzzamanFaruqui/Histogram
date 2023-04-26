@@ -1,0 +1,18 @@
+% Generate random data
+data1 = randn(1, 1000);
+data2 = randn(1, 1000);
+
+% Define the bin edges
+binEdges = linspace(-4, 4, 31);
+
+% Create side-by-side histograms
+figure;
+h1 = histogram(data1, binEdges, 'FaceColor', 'red', 'EdgeColor', 'black', 'DisplayStyle', 'bar', 'Normalization', 'count', 'BinWidth', 0.25);
+hold on;
+h2 = histogram(data2, binEdges, 'FaceColor', 'blue', 'EdgeColor', 'black', 'DisplayStyle', 'bar', 'Normalization', 'count', 'BinWidth', 0.25);
+xlabel('Data');
+ylabel('Frequency');
+title('Side-by-side Histogram');
+legend([h1, h2], {'Data 1', 'Data 2'});
+grid on;
+hold off;
