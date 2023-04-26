@@ -1,0 +1,10 @@
+% Generate random data
+data = randn(1, 1000);
+
+% Create a simple histogram
+figure;
+histogram(data, 30, 'FaceColor', 'blue', 'EdgeColor', 'black');
+xlabel('Data');
+ylabel('Frequency');
+title('Simple Histogram');
+grid on;
