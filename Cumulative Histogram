@@ -1,0 +1,17 @@
+pip install matplotlib
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Generate random data
+data = np.random.randn(1000)
+
+# Create a cumulative histogram
+plt.hist(data, bins=30, alpha=0.75, color='green', edgecolor='black', cumulative=True)
+plt.xlabel('Data')
+plt.ylabel('Cumulative Frequency')
+plt.title('Cumulative Histogram')
+plt.grid(True)
+
+# Show the plot
+plt.show()
