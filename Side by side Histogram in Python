@@ -1,0 +1,23 @@
+pip install matplotlib
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Generate random data
+data1 = np.random.randn(1000)
+data2 = np.random.randn(1000)
+
+# Define the bin edges
+bins = np.linspace(-4, 4, 31)
+
+# Create side-by-side histograms
+plt.hist(data1, bins, alpha=0.75, color='red', edgecolor='black', label='Data 1')
+plt.hist(data2, bins, alpha=0.75, color='blue', edgecolor='black', label='Data 2')
+plt.xlabel('Data')
+plt.ylabel('Frequency')
+plt.title('Side-by-side Histogram')
+plt.legend(loc='upper right')
+plt.grid(True)
+
+# Show the plot
+plt.show()
